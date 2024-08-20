@@ -3,15 +3,16 @@ import Component5 from "./component5";
 
 
 interface Component4Props {
-  callBack: () => void
+  callBack: (title: string) => void
 }
 
 const Component4: React.FC<Component4Props> = ({callBack}) => {
   const [isGreen, setIsGreen] = useState(false);
 
-  const callBackHandler = () => {
-    setIsGreen(true)
-    callBack()
+  const callBackHandler = (title: string) => {
+    setIsGreen(true);
+    callBack(title);
+    
   }
  
 
